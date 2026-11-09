@@ -1,34 +1,34 @@
-id_observacion,anio_escolar,periodo,ciclo,grado,seccion,grupo,especialidad,abandonos,es_periodo_2,ciclo_num,es_segundo_ciclo,grado_alto,estado_validacion
-1,2024-2025,2024-2025,Primer Ciclo,1,A,1.º A,N/A,0,0,1,0,0,Confirmado
-2,2024-2025,2024-2025,Primer Ciclo,1,B,1.º B,N/A,0,0,1,0,0,Confirmado
-3,2024-2025,2024-2025,Primer Ciclo,1,C,1.º C,N/A,0,0,1,0,0,Confirmado
-4,2024-2025,2024-2025,Primer Ciclo,1,D,1.º D,N/A,1,0,1,0,0,Confirmado
-5,2024-2025,2024-2025,Primer Ciclo,2,A,2.º A,N/A,2,0,1,0,0,Confirmado
-6,2024-2025,2024-2025,Primer Ciclo,2,B,2.º B,N/A,2,0,1,0,0,Confirmado
-7,2024-2025,2024-2025,Primer Ciclo,3,A,3.º A,N/A,1,0,1,0,0,Confirmado
-8,2024-2025,2024-2025,Primer Ciclo,3,B,3.º B,N/A,0,0,1,0,0,Confirmado
-9,2024-2025,2024-2025,Segundo Ciclo,4,A,4.º A,Producción Agropecuaria,1,0,2,1,1,Confirmado
-10,2024-2025,2024-2025,Segundo Ciclo,4,B,4.º B,Comercio y Mercadeo,1,0,2,1,1,Confirmado
-11,2024-2025,2024-2025,Segundo Ciclo,4,C,4.º C,Gestión Administrativa y Tributaria,0,0,2,1,1,Confirmado
-12,2024-2025,2024-2025,Segundo Ciclo,5,A,5.º A,Producción Agropecuaria,1,0,2,1,1,Confirmado
-13,2024-2025,2024-2025,Segundo Ciclo,5,B,5.º B,Comercio y Mercadeo,0,0,2,1,1,Confirmado
-14,2024-2025,2024-2025,Segundo Ciclo,5,C,5.º C,Gestión Administrativa y Tributaria,0,0,2,1,1,Confirmado
-15,2024-2025,2024-2025,Segundo Ciclo,6,A,6.º A,Producción Agropecuaria,0,0,2,1,1,Confirmado
-16,2024-2025,2024-2025,Segundo Ciclo,6,B,6.º B,Comercio y Mercadeo,0,0,2,1,1,Confirmado
-17,2024-2025,2024-2025,Segundo Ciclo,6,C,6.º C,Gestión Administrativa y Tributaria,0,0,2,1,1,Confirmado
-18,2025-2026,2025-2026,Primer Ciclo,1,A,1.º A,N/A,1,1,1,0,0,Confirmado
-19,2025-2026,2025-2026,Primer Ciclo,1,B,1.º B,N/A,1,1,1,0,0,Confirmado
-20,2025-2026,2025-2026,Primer Ciclo,1,C,1.º C,N/A,4,1,1,0,0,Confirmado
-21,2025-2026,2025-2026,Primer Ciclo,2,A,2.º A,N/A,1,1,1,0,0,Confirmado
-22,2025-2026,2025-2026,Primer Ciclo,2,B,2.º B,N/A,2,1,1,0,0,Confirmado
-23,2025-2026,2025-2026,Primer Ciclo,3,A,3.º A,N/A,1,1,1,0,0,Confirmado
-24,2025-2026,2025-2026,Primer Ciclo,3,B,3.º B,N/A,0,1,1,0,0,Confirmado
-25,2025-2026,2025-2026,Segundo Ciclo,4,A,4.º A,Producción Agropecuaria,2,1,2,1,1,Confirmado
-26,2025-2026,2025-2026,Segundo Ciclo,4,B,4.º B,Comercio y Mercadeo,0,1,2,1,1,Confirmado
-27,2025-2026,2025-2026,Segundo Ciclo,4,C,4.º C,Gestión Administrativa y Tributaria,0,1,2,1,1,Confirmado
-28,2025-2026,2025-2026,Segundo Ciclo,5,A,5.º A,Producción Agropecuaria,2,1,2,1,1,Confirmado
-29,2025-2026,2025-2026,Segundo Ciclo,5,B,5.º B,Comercio y Mercadeo,0,1,2,1,1,Confirmado
-30,2025-2026,2025-2026,Segundo Ciclo,5,C,5.º C,Gestión Administrativa y Tributaria,1,1,2,1,1,Confirmado
-31,2025-2026,2025-2026,Segundo Ciclo,6,A,6.º A,Producción Agropecuaria,0,1,2,1,1,Confirmado
-32,2025-2026,2025-2026,Segundo Ciclo,6,B,6.º B,Comercio y Mercadeo,0,1,2,1,1,Confirmado
-33,2025-2026,2025-2026,Segundo Ciclo,6,C,6.º C,Gestión Administrativa y Tributaria,0,1,2,1,1,Confirmado
+"id_observacion","anio_escolar","periodo","ciclo","grado","seccion","grupo","especialidad","abandonos","es_periodo_2","ciclo_num","es_segundo_ciclo","grado_alto","estado_validacion"
+"1","2024-2025","2024-2025","Primer Ciclo","1","A","1.º A","Nivel Secundario General (1.er Ciclo)","0","0","1","0","0","Confirmado"
+"2","2024-2025","2024-2025","Primer Ciclo","1","B","1.º B","Nivel Secundario General (1.er Ciclo)","0","0","1","0","0","Confirmado"
+"3","2024-2025","2024-2025","Primer Ciclo","1","C","1.º C","Nivel Secundario General (1.er Ciclo)","0","0","1","0","0","Confirmado"
+"4","2024-2025","2024-2025","Primer Ciclo","1","D","1.º D","Nivel Secundario General (1.er Ciclo)","1","0","1","0","0","Confirmado"
+"5","2024-2025","2024-2025","Primer Ciclo","2","A","2.º A","Nivel Secundario General (1.er Ciclo)","2","0","1","0","0","Confirmado"
+"6","2024-2025","2024-2025","Primer Ciclo","2","B","2.º B","Nivel Secundario General (1.er Ciclo)","2","0","1","0","0","Confirmado"
+"7","2024-2025","2024-2025","Primer Ciclo","3","A","3.º A","Nivel Secundario General (1.er Ciclo)","1","0","1","0","0","Confirmado"
+"8","2024-2025","2024-2025","Primer Ciclo","3","B","3.º B","Nivel Secundario General (1.er Ciclo)","0","0","1","0","0","Confirmado"
+"9","2024-2025","2024-2025","Segundo Ciclo","4","A","4.º A","Producción Agropecuaria","1","0","2","1","1","Confirmado"
+"10","2024-2025","2024-2025","Segundo Ciclo","4","B","4.º B","Comercio y Mercadeo","1","0","2","1","1","Confirmado"
+"11","2024-2025","2024-2025","Segundo Ciclo","4","C","4.º C","Gestión Administrativa y Tributaria","0","0","2","1","1","Confirmado"
+"12","2024-2025","2024-2025","Segundo Ciclo","5","A","5.º A","Producción Agropecuaria","1","0","2","1","1","Confirmado"
+"13","2024-2025","2024-2025","Segundo Ciclo","5","B","5.º B","Comercio y Mercadeo","0","0","2","1","1","Confirmado"
+"14","2024-2025","2024-2025","Segundo Ciclo","5","C","5.º C","Gestión Administrativa y Tributaria","0","0","2","1","1","Confirmado"
+"15","2024-2025","2024-2025","Segundo Ciclo","6","A","6.º A","Producción Agropecuaria","0","0","2","1","1","Confirmado"
+"16","2024-2025","2024-2025","Segundo Ciclo","6","B","6.º B","Comercio y Mercadeo","0","0","2","1","1","Confirmado"
+"17","2024-2025","2024-2025","Segundo Ciclo","6","C","6.º C","Gestión Administrativa y Tributaria","0","0","2","1","1","Confirmado"
+"18","2025-2026","2025-2026","Primer Ciclo","1","A","1.º A","Nivel Secundario General (1.er Ciclo)","1","1","1","0","0","Confirmado"
+"19","2025-2026","2025-2026","Primer Ciclo","1","B","1.º B","Nivel Secundario General (1.er Ciclo)","1","1","1","0","0","Confirmado"
+"20","2025-2026","2025-2026","Primer Ciclo","1","C","1.º C","Nivel Secundario General (1.er Ciclo)","4","1","1","0","0","Confirmado"
+"21","2025-2026","2025-2026","Primer Ciclo","2","A","2.º A","Nivel Secundario General (1.er Ciclo)","1","1","1","0","0","Confirmado"
+"22","2025-2026","2025-2026","Primer Ciclo","2","B","2.º B","Nivel Secundario General (1.er Ciclo)","2","1","1","0","0","Confirmado"
+"23","2025-2026","2025-2026","Primer Ciclo","3","A","3.º A","Nivel Secundario General (1.er Ciclo)","1","1","1","0","0","Confirmado"
+"24","2025-2026","2025-2026","Primer Ciclo","3","B","3.º B","Nivel Secundario General (1.er Ciclo)","0","1","1","0","0","Confirmado"
+"25","2025-2026","2025-2026","Segundo Ciclo","4","A","4.º A","Producción Agropecuaria","2","1","2","1","1","Confirmado"
+"26","2025-2026","Segundo Ciclo","4","B","4.º B","Comercio y Mercadeo","0","1","2","1","1","Confirmado"
+"27","2025-2026","2025-2026","Segundo Ciclo","4","C","4.º C","Gestión Administrativa y Tributaria","0","1","2","1","1","Confirmado"
+"28","2025-2026","2025-2026","Segundo Ciclo","5","A","5.º A","Producción Agropecuaria","2","1","2","1","1","Confirmado"
+"29","2025-2026","2025-2026","Segundo Ciclo","5","B","5.º B","Comercio y Mercadeo","0","1","2","1","1","Confirmado"
+"30","2025-2026","2025-2026","Segundo Ciclo","5","C","5.º C","Gestión Administrativa y Tributaria","1","1","2","1","1","Confirmado"
+"31","2025-2026","2025-2026","Segundo Ciclo","6","A","6.º A","Producción Agropecuaria","0","1","2","1","1","Confirmado"
+"32","2025-2026","2025-2026","Segundo Ciclo","6","B","6.º B","Comercio y Mercadeo","0","1","2","1","1","Confirmado"
+"33","2025-2026","2025-2026","Segundo Ciclo","6","C","6.º C","Gestión Administrativa y Tributaria","0","1","2","1","1","Confirmado"
