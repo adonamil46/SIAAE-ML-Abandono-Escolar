@@ -184,7 +184,7 @@ def inject_custom_css() -> None:
 
 
 # ==============================================================================
-# 3. CARGA Y RESPALDO VERIFICADO DE DATOS INSTITUCIONALES (BLOQUE A)
+# 3. CARGA, NORMALIZACIÓN Y RESPALDO VERIFICADO DE DATOS (BLOQUE A)
 # ==============================================================================
 def _build_verified_fallback_dataframe() -> pd.DataFrame:
     """
@@ -229,13 +229,50 @@ def _build_verified_fallback_dataframe() -> pd.DataFrame:
         {"anio_escolar": "2025-2026", "ciclo": "Segundo Ciclo", "grado": 6, "seccion": "C", "especialidad": "Gestión Administrativa y Tributaria", "abandonos": 0},
     ]
     df = pd.DataFrame(registros)
-    df.insert(0, "id_registro", range(1, len(df) + 1))
-    df["periodo"] = df["anio_escolar"].map({"2024-2025": 1, "2025-2026": 2})
+    df.insert(0, "id_observacion", range(1, len(df) + 1))
+    df["id_registro"] = df["id_observacion"]
+    df["periodo"] = df["anio_escolar"]
     df["grupo"] = df["grado"].astype(str) + ".º " + df["seccion"]
     df["es_periodo_2"] = (df["anio_escolar"] == "2025-2026").astype(int)
     df["ciclo_num"] = df["ciclo"].map({"Primer Ciclo": 1, "Segundo Ciclo": 2})
     df["es_segundo_ciclo"] = (df["ciclo_num"] == 2).astype(int)
     df["grado_alto"] = (df["grado"] >= 4).astype(int)
+    df["estado_validacion"] = "Confirmado"
+    return df
+
+
+def _normalize_main_dataframe(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Homologa nombres de columnas, tipos numéricos y etiquetas de especialidad
+    (por ejemplo, cuando 'N/A' en CSV es interpretado como NaN por pandas).
+    """
+    df = df.copy()
+    if "id_observacion" in df.columns and "id_registro" not in df.columns:
+        df["id_registro"] = df["id_observacion"]
+    elif "id_registro" in df.columns and "id_observacion" not in df.columns:
+        df["id_observacion"] = df["id_registro"]
+    elif "id_observacion" not in df.columns and "id_registro" not in df.columns:
+        df.insert(0, "id_observacion", range(1, len(df) + 1))
+        df["id_registro"] = df["id_observacion"]
+
+    df["grado"] = pd.to_numeric(df["grado"], errors="raise").astype(int)
+    df["abandonos"] = pd.to_numeric(df["abandonos"], errors="raise").astype(int)
+
+    # Normalizar 'N/A' o NaN en el Primer Ciclo a etiqueta descriptiva clara
+    df["especialidad"] = (
+        df["especialidad"]
+        .fillna("Nivel Secundario General (1.er Ciclo)")
+        .replace(
+            {
+                "N/A": "Nivel Secundario General (1.er Ciclo)",
+                "NA": "Nivel Secundario General (1.er Ciclo)",
+                "": "Nivel Secundario General (1.er Ciclo)",
+            }
+        )
+    )
+    if "grupo" not in df.columns:
+        df["grupo"] = df["grado"].astype(str) + ".º " + df["seccion"].astype(str)
+
     return df
 
 
@@ -246,19 +283,38 @@ def load_institutional_data() -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame,
     con Streamlit Community Cloud y verifica su integridad (33 filas, 24 abandonos).
     """
     if PATH_PROCESSED_CSV.exists():
-        df_main = pd.read_csv(PATH_PROCESSED_CSV, encoding="utf-8")
+        df_raw = pd.read_csv(
+            PATH_PROCESSED_CSV,
+            encoding="utf-8-sig",
+            sep=",",
+            quotechar='"',
+            keep_default_na=False,
+        )
+        df_main = _normalize_main_dataframe(df_raw)
         origen = "data/processed/abandono_agregado_siaae.csv"
     else:
         df_main = _build_verified_fallback_dataframe()
         origen = "Respaldo interno verificado (33 registros institucionales)"
 
     if PATH_RESUMEN_CSV.exists():
-        df_resumen = pd.read_csv(PATH_RESUMEN_CSV, encoding="utf-8")
+        df_resumen = pd.read_csv(
+            PATH_RESUMEN_CSV,
+            encoding="utf-8-sig",
+            sep=",",
+            quotechar='"',
+            keep_default_na=False,
+        )
     else:
         df_resumen = pd.DataFrame()
 
     if PATH_DICCIONARIO_CSV.exists():
-        df_diccionario = pd.read_csv(PATH_DICCIONARIO_CSV, encoding="utf-8")
+        df_diccionario = pd.read_csv(
+            PATH_DICCIONARIO_CSV,
+            encoding="utf-8-sig",
+            sep=",",
+            quotechar='"',
+            keep_default_na=False,
+        )
     else:
         df_diccionario = pd.DataFrame()
 
@@ -689,7 +745,15 @@ def render_tab_eda(
     with subtab1:
         if not df_resumen.empty:
             df_res_vista = df_resumen[
-                df_resumen["dimension"].isin(["Total Institucional", "Ciclo Educativo", "Grado Escolar", "Especialidad Segundo Ciclo"])
+                df_resumen["dimension"].isin(
+                    [
+                        "Total Institucional",
+                        "Ciclo Educativo",
+                        "Grado Escolar",
+                        "Especialidad Técnica (Segundo Ciclo)",
+                        "Especialidad Segundo Ciclo",
+                    ]
+                )
             ].copy()
             st.dataframe(df_res_vista, use_container_width=True, hide_index=True)
         else:
@@ -697,25 +761,31 @@ def render_tab_eda(
 
     with subtab2:
         if not df_resumen.empty:
-            df_sec_vista = df_resumen[df_resumen["dimension"] == "Sección Escolar"].copy()
+            df_sec_vista = df_resumen[
+                df_resumen["dimension"].isin(["Sección Específica", "Sección Escolar"])
+            ].copy()
             st.dataframe(df_sec_vista, use_container_width=True, hide_index=True)
         else:
             st.dataframe(pivot_calor.reset_index(), use_container_width=True, hide_index=True)
 
     with subtab3:
+        columnas_tabla = [
+            col
+            for col in [
+                "id_observacion",
+                "anio_escolar",
+                "ciclo",
+                "grado",
+                "seccion",
+                "grupo",
+                "especialidad",
+                "abandonos",
+                "estado_validacion",
+            ]
+            if col in df_filtered.columns
+        ]
         st.dataframe(
-            df_filtered[
-                [
-                    "id_registro",
-                    "anio_escolar",
-                    "ciclo",
-                    "grado",
-                    "seccion",
-                    "grupo",
-                    "especialidad",
-                    "abandonos",
-                ]
-            ],
+            df_filtered[columnas_tabla],
             use_container_width=True,
             hide_index=True,
         )
