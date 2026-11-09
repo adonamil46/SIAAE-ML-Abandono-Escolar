@@ -1,0 +1,30 @@
+dimension,categoria,secciones_2024_2025,secciones_2025_2026,abandonos_2024_2025,abandonos_2025_2026,acumulado_total,variacion_absoluta,variacion_porcentual_conteo,participacion_total_pct,nota_metodologica
+Total Institucional,Politécnico José Antonio Castillo Ferreiras,17,16,9,15,24,6,+66.7%,100.0%,Variación del conteo absoluto; 1.º D no reportada en 2025-2026
+Ciclo Educativo,Primer Ciclo (1.º a 3.º),8,7,6,10,16,4,+66.7%,66.7%,Concentra dos tercios de los abandonos confirmados en la serie
+Ciclo Educativo,Segundo Ciclo Técnico-Profesional (4.º a 6.º),9,9,3,5,8,2,+66.7%,33.3%,Incluye tres especialidades técnicas en grados 4.º a 6.º
+Grado Escolar,1.º de Secundaria,4,3,1,6,7,5,+500.0%,29.2%,Mayor incremento entre períodos (1.º C pasó de 0 a 4 casos); 1.º D no reportada en 2025-2026
+Grado Escolar,2.º de Secundaria,2,2,4,3,7,-1,-25.0%,29.2%,2.º A pasó de 2 a 1 caso y 2.º B mantuvo 2 casos en ambos períodos
+Grado Escolar,3.º de Secundaria,2,2,1,1,2,0,0.0%,8.3%,3.º A registró 1 caso por período y 3.º B registró 0 casos
+Grado Escolar,4.º de Secundaria,3,3,2,2,4,0,0.0%,16.7%,4.º A pasó de 1 a 2 casos; 4.º B pasó de 1 a 0; 4.º C mantuvo 0
+Grado Escolar,5.º de Secundaria,3,3,1,3,4,2,+200.0%,16.7%,5.º A pasó de 1 a 2 casos; 5.º B mantuvo 0; 5.º C pasó de 0 a 1
+Grado Escolar,6.º de Secundaria,3,3,0,0,0,0,0.0%,0.0%,Cero abandonos confirmados en ambos períodos escolares
+Especialidad Técnica (Segundo Ciclo),Producción Agropecuaria (Sección A: 4.º-6.º),3,3,2,4,6,2,+100.0%,25.0%,Concentra 6 de los 8 casos del Segundo Ciclo Técnico-Profesional
+Especialidad Técnica (Segundo Ciclo),Comercio y Mercadeo (Sección B: 4.º-6.º),3,3,1,0,1,-1,-100.0%,4.2%,Único caso registrado en 4.º B durante 2024-2025
+Especialidad Técnica (Segundo Ciclo),Gestión Administrativa y Tributaria (Sección C: 4.º-6.º),3,3,0,1,1,1,N/A,4.2%,Único caso registrado en 5.º C durante 2025-2026
+Sección Específica,1.º A (Primer Ciclo),1,1,0,1,1,1,N/A,4.2%,Confirmado
+Sección Específica,1.º B (Primer Ciclo),1,1,0,1,1,1,N/A,4.2%,Confirmado
+Sección Específica,1.º C (Primer Ciclo),1,1,0,4,4,4,N/A,16.7%,Mayor concentración puntual en una sola sección-año (2025-2026)
+Sección Específica,1.º D (Primer Ciclo),1,0,1,No reportada,1,N/A,N/A,4.2%,No reportada en 2025-2026; no se sustituye por cero
+Sección Específica,2.º A (Primer Ciclo),1,1,2,1,3,-1,-50.0%,12.5%,Confirmado
+Sección Específica,2.º B (Primer Ciclo),1,1,2,2,4,0,0.0%,16.7%,Persistencia de 2 casos en ambos períodos
+Sección Específica,3.º A (Primer Ciclo),1,1,1,1,2,0,0.0%,8.3%,Confirmado
+Sección Específica,3.º B (Primer Ciclo),1,1,0,0,0,0,0.0%,0.0%,Confirmado
+Sección Específica,4.º A (Producción Agropecuaria),1,1,1,2,3,1,+100.0%,12.5%,Confirmado
+Sección Específica,4.º B (Comercio y Mercadeo),1,1,1,0,1,-1,-100.0%,4.2%,Confirmado
+Sección Específica,4.º C (Gestión Administrativa y Tributaria),1,1,0,0,0,0,0.0%,0.0%,Confirmado
+Sección Específica,5.º A (Producción Agropecuaria),1,1,1,2,3,1,+100.0%,12.5%,Confirmado
+Sección Específica,5.º B (Comercio y Mercadeo),1,1,0,0,0,0,0.0%,0.0%,Confirmado
+Sección Específica,5.º C (Gestión Administrativa y Tributaria),1,1,0,1,1,1,N/A,4.2%,Confirmado
+Sección Específica,6.º A (Producción Agropecuaria),1,1,0,0,0,0,0.0%,0.0%,Confirmado
+Sección Específica,6.º B (Comercio y Mercadeo),1,1,0,0,0,0,0.0%,0.0%,Confirmado
+Sección Específica,6.º C (Gestión Administrativa y Tributaria),1,1,0,0,0,0,0.0%,0.0%,Confirmado
