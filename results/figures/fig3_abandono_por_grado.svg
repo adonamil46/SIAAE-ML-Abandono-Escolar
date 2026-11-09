@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 490" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <linearGradient id="g24" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="g25" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="880" height="490" rx="14" fill="url(#bgGrad3)" stroke="#cbd5e1" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="440" y="40" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f172a" text-anchor="middle">
+    Figura 3. Evolución Comparativa del Abandono Escolar por Grado (1.º a 6.º de Secundaria)
+  </text>
+  <text x="440" y="64" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13" fill="#475569" text-anchor="middle">
+    Destaca el incremento en 1.º de secundaria (de 1 a 6 casos) y la ausencia de abandonos en 6.º grado (0 en ambos períodos)
+  </text>
+
+  <!-- Legend -->
+  <g transform="translate(285, 80)" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#334155">
+    <rect x="0" y="0" width="16" height="16" rx="3" fill="url(#g24)"/>
+    <text x="24" y="13">2024-2025 (9 casos)</text>
+    <rect x="175" y="0" width="16" height="16" rx="3" fill="url(#g25)"/>
+    <text x="199" y="13">2025-2026 (15 casos)</text>
+  </g>
+
+  <!-- Grid: y=380 (0) to y=135 (7) -> 35px per unit -->
+  <g stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,4">
+    <line x1="90" y1="380" x2="830" y2="380" stroke="#94a3b8" stroke-dasharray="0" stroke-width="1.5"/>
+    <line x1="90" y1="345" x2="830" y2="345"/>
+    <line x1="90" y1="310" x2="830" y2="310"/>
+    <line x1="90" y1="275" x2="830" y2="275"/>
+    <line x1="90" y1="240" x2="830" y2="240"/>
+    <line x1="90" y1="205" x2="830" y2="205"/>
+    <line x1="90" y1="170" x2="830" y2="170"/>
+    <line x1="90" y1="135" x2="830" y2="135"/>
+  </g>
+
+  <!-- Y Axis Labels -->
+  <g font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#475569" text-anchor="end">
+    <text x="78" y="384">0</text>
+    <text x="78" y="349">1</text>
+    <text x="78" y="314">2</text>
+    <text x="78" y="279">3</text>
+    <text x="78" y="244">4</text>
+    <text x="78" y="209">5</text>
+    <text x="78" y="174">6</text>
+    <text x="78" y="139">7</text>
+  </g>
+  <text x="36" y="258" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#334155" text-anchor="middle" transform="rotate(-90 36,258)">
+    Abandonos confirmados por grado
+  </text>
+
+  <!-- Cycle Divider Line -->
+  <line x1="460" y1="115" x2="460" y2="435" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="275" y="125" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#0f766e" text-anchor="middle">PRIMER CICLO (16 casos)</text>
+  <text x="645" y="125" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#4338ca" text-anchor="middle">SEGUNDO CICLO TÉCNICO (8 casos)</text>
+
+  <!-- 1.º Grado: 24-25=1 (y=345, h=35), 25-26=6 (y=170, h=210) -->
+  <rect x="115" y="345" width="40" height="35" rx="4" fill="url(#g24)" filter="url(#shadow3)"/>
+  <text x="135" y="337" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e40af" text-anchor="middle">1</text>
+  <rect x="160" y="170" width="40" height="210" rx="4" fill="url(#g25)" filter="url(#shadow3)"/>
+  <text x="180" y="160" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="16" font-weight="800" fill="#c2410c" text-anchor="middle">6</text>
+  <text x="157" y="402" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">1.º Grado</text>
+  <text x="157" y="420" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#ea580c" text-anchor="middle">Total: 7 (+5)</text>
+
+  <!-- 2.º Grado: 24-25=4 (y=240, h=140), 25-26=3 (y=275, h=105) -->
+  <rect x="235" y="240" width="40" height="140" rx="4" fill="url(#g24)" filter="url(#shadow3)"/>
+  <text x="255" y="232" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e40af" text-anchor="middle">4</text>
+  <rect x="280" y="275" width="40" height="105" rx="4" fill="url(#g25)" filter="url(#shadow3)"/>
+  <text x="300" y="267" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#c2410c" text-anchor="middle">3</text>
+  <text x="277" y="402" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">2.º Grado</text>
+  <text x="277" y="420" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" fill="#475569" text-anchor="middle">Total: 7 (-1)</text>
+
+  <!-- 3.º Grado: 24-25=1 (y=345, h=35), 25-26=1 (y=345, h=35) -->
+  <rect x="355" y="345" width="40" height="35" rx="4" fill="url(#g24)" filter="url(#shadow3)"/>
+  <text x="375" y="337" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e40af" text-anchor="middle">1</text>
+  <rect x="400" y="345" width="40" height="35" rx="4" fill="url(#g25)" filter="url(#shadow3)"/>
+  <text x="420" y="337" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#c2410c" text-anchor="middle">1</text>
+  <text x="397" y="402" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">3.º Grado</text>
+  <text x="397" y="420" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" fill="#475569" text-anchor="middle">Total: 2 (0)</text>
+
+  <!-- 4.º Grado: 24-25=2 (y=310, h=70), 25-26=2 (y=310, h=70) -->
+  <rect x="485" y="310" width="40" height="70" rx="4" fill="url(#g24)" filter="url(#shadow3)"/>
+  <text x="505" y="302" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e40af" text-anchor="middle">2</text>
+  <rect x="530" y="310" width="40" height="70" rx="4" fill="url(#g25)" filter="url(#shadow3)"/>
+  <text x="550" y="302" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#c2410c" text-anchor="middle">2</text>
+  <text x="527" y="402" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">4.º Grado</text>
+  <text x="527" y="420" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" fill="#475569" text-anchor="middle">Total: 4 (0)</text>
+
+  <!-- 5.º Grado: 24-25=1 (y=345, h=35), 25-26=3 (y=275, h=105) -->
+  <rect x="605" y="345" width="40" height="35" rx="4" fill="url(#g24)" filter="url(#shadow3)"/>
+  <text x="625" y="337" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#1e40af" text-anchor="middle">1</text>
+  <rect x="650" y="275" width="40" height="105" rx="4" fill="url(#g25)" filter="url(#shadow3)"/>
+  <text x="670" y="267" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="15" font-weight="700" fill="#c2410c" text-anchor="middle">3</text>
+  <text x="647" y="402" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">5.º Grado</text>
+  <text x="647" y="420" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#ea580c" text-anchor="middle">Total: 4 (+2)</text>
+
+  <!-- 6.º Grado: 24-25=0, 25-26=0 -->
+  <rect x="725" y="376" width="40" height="4" rx="2" fill="#94a3b8"/>
+  <text x="745" y="368" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748b" text-anchor="middle">0</text>
+  <rect x="770" y="376" width="40" height="4" rx="2" fill="#94a3b8"/>
+  <text x="790" y="368" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#64748b" text-anchor="middle">0</text>
+  <text x="767" y="402" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#0f172a" text-anchor="middle">6.º Grado</text>
+  <text x="767" y="420" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#16a34a" text-anchor="middle">Total: 0 (Estable)</text>
+
+  <!-- Footer -->
+  <text x="440" y="468" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    Fuente: Registros institucionales verificados del Politécnico José Antonio Castillo Ferreiras (SIAAE-ML, UFHEC 2026).
+  </text>
+</svg>

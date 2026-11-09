@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SIAAE-ML: Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning — Politécnico José Antonio Castillo Ferreiras (UFHEC).">
+  <meta name="author" content="Ing. Adonamil Cruz Evangelista">
+  <title>SIAAE-ML | Sistema Inteligente de Análisis del Abandono Escolar (UFHEC)</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#portada" class="nav-brand">
+        🎓 SIAAE-ML <span class="tag">UFHEC · Maestría IA</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#presentacion">Presentación</a></li>
+        <li><a href="#problematica">Problemática</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#contexto">Contexto</a></li>
+        <li><a href="#metodologia">CRISP-ML</a></li>
+        <li><a href="#datos">Datos (n=33)</a></li>
+        <li><a href="#graficos">Gráficos</a></li>
+        <li><a href="#laboratorio-ml">Laboratorio ML</a></li>
+        <li><a href="#streamlit">Streamlit</a></li>
+        <li><a href="#conclusiones">Conclusiones</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN 1: PORTADA DEL SISTEMA SIAAE-ML -->
+  <header id="portada" class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="badge-ufhec">Universidad Federico Henríquez y Carvajal (UFHEC) · Asignatura: Machine Learning</span>
+        <h1>Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning (SIAAE-ML)</h1>
+        <p class="lead">
+          Investigación aplicada de ciencia de datos e inteligencia artificial sobre los registros institucionales verificados del
+          <strong>Politécnico José Antonio Castillo Ferreiras</strong> (Paso de Moca, Provincia Espaillat, República Dominicana)
+          durante los períodos académicos <strong>2024-2025</strong> y <strong>2025-2026</strong>.
+        </p>
+        <div class="meta-pills">
+          <div class="meta-pill"><strong>Autor:</strong> Ing. Adonamil Cruz Evangelista</div>
+          <div class="meta-pill"><strong>Programa:</strong> Maestría en IA Aplicada a la Educación y la Tecnología</div>
+          <div class="meta-pill"><strong>Observaciones:</strong> 33 secciones-año · 24 abandonos verificados</div>
+          <div class="meta-pill"><strong>Criterio Oficial:</strong> Exclusión estricta de traslados</div>
+        </div>
+        <div class="hero-actions">
+          <a href="https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">🚀 Abrir Aplicación Streamlit</a>
+          <a href="#datos" class="btn btn-secondary">📊 Explorar los 33 Registros Reales</a>
+          <a href="https://github.com/adonamil46/SIAAE-ML-Abandono-Escolar.git" target="_blank" rel="noopener noreferrer" class="btn btn-amber">💻 Repositorio Oficial GitHub</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/images/ilustracion_hero_siaae.svg" alt="Panel visual del Sistema SIAAE-ML con indicadores reales del Politécnico José Antonio Castillo Ferreiras">
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 2: PRESENTACIÓN DEL PROYECTO -->
+  <section id="presentacion" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 02 · Resumen Ejecutivo</span>
+      <h2 class="section-title">Presentación General del Proyecto SIAAE-ML</h2>
+      <p class="section-desc">
+        El proyecto <strong>SIAAE-ML</strong> articula estadística descriptiva rigurosa, visualización científica interactiva y diseño metodológico de Machine Learning para transformar registros administrativos de deserción en inteligencia accionable para la gestión psicopedagógica.
+      </p>
+    </div>
+
+    <div class="grid-4" style="margin-bottom: 1.75rem;">
+      <div class="kpi-box">
+        <div class="label">Unidades Sección-Año</div>
+        <div class="value">33</div>
+        <div class="sub">17 (2024-2025) · 16 (2025-2026)</div>
+      </div>
+      <div class="kpi-box" style="border-left-color: #2563eb;">
+        <div class="label">Abandonos Confirmados</div>
+        <div class="value">24 casos</div>
+        <div class="sub">9 en 2024-2025 → 15 en 2025-2026 (+66.7%)</div>
+      </div>
+      <div class="kpi-box" style="border-left-color: #0d9488;">
+        <div class="label">Concentración Primer Ciclo</div>
+        <div class="value">66.7%</div>
+        <div class="sub">16 de 24 casos en grados 1.º a 3.º</div>
+      </div>
+      <div class="kpi-box" style="border-left-color: #d97706;">
+        <div class="label">Retención en 6.º Grado</div>
+        <div class="value">0 casos</div>
+        <div class="sub">100% de retención en secciones de término</div>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card card-accent-blue">
+        <h3>🔬 Rigor Científico e Integridad de Datos</h3>
+        <p>
+          Todo el sistema se sustenta de manera exclusiva en la evidencia documental verificada del centro educativo. No se inventan registros estudiantiles, no se imputan matrículas inexistentes y se mantiene la separación estricta entre el análisis estadístico de los <strong>33 conteos por sección</strong> y el protocolo futuro para modelos predictivos individuales.
+        </p>
+      </div>
+      <div class="card card-accent-teal">
+        <h3>🎯 Enfoque Pedagógico y Preventivo</h3>
+        <p>
+          Lejos de etiquetar o estigmatizar al estudiantado, el sistema localiza exactamente en qué ciclos, grados, secciones y especialidades técnico-profesionales se concentra la vulnerabilidad, orientando al Departamento de Orientación y Psicología y al Equipo de Gestión en la asignación oportuna de tutorías y seguimiento familiar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: PROBLEMÁTICA DEL ABANDONO ESCOLAR -->
+  <div class="section-alt">
+    <section id="problematica" class="section">
+      <div class="section-header">
+        <span class="section-num">Sección 03 · Planteamiento del Problema</span>
+        <h2 class="section-title">Problemática del Abandono Escolar en el Nivel Secundario</h2>
+        <p class="section-desc">
+          El abandono escolar constituye uno de los desafíos socioeducativos más críticos de la educación secundaria y técnico-profesional en la República Dominicana, al interrumpir trayectorias formativas y limitar la inserción laboral calificada de los jóvenes.
+        </p>
+      </div>
+
+      <div class="grid-2" style="align-items: center;">
+        <div>
+          <div class="card card-accent-navy" style="margin-bottom: 1.2rem;">
+            <h3>1. Desafío de la Transición Escolar y Modalidad Técnica</h3>
+            <p>
+              El paso hacia los primeros grados de secundaria (<code>1.º</code> y <code>2.º</code>) supone una exigencia adaptativa, curricular y socioemocional elevada. Asimismo, en el Segundo Ciclo Técnico-Profesional (<code>4.º</code> a <code>6.º</code>), la carga práctica de talleres e inserción técnica demanda un acompañamiento focalizado según cada especialidad.
+            </p>
+          </div>
+          <div class="card card-accent-amber" style="margin-bottom: 1.2rem;">
+            <h3>2. Distinción Conceptual: Abandono vs. Traslado Escolar</h3>
+            <p>
+              Un error frecuente en estadísticas administrativas es confundir el <strong>traslado escolar</strong> (cambio de plantel con continuidad de estudios en otro centro del sistema educativo) con el <strong>abandono escolar</strong> (interrupción real de la escolaridad durante el año lectivo). En <strong>SIAAE-ML</strong>, los traslados quedan rigurosamente excluidos del conteo de abandono.
+            </p>
+          </div>
+          <div class="card card-accent-blue">
+            <h3>3. Necesidad de Analítica Basada en Evidencia</h3>
+            <p>
+              En el Politécnico José Antonio Castillo Ferreiras, el conteo absoluto de abandonos pasó de <strong>9 casos</strong> en <code>2024-2025</code> a <strong>15 casos</strong> en <code>2025-2026</code> (+6 casos, +66.7%), haciendo indispensable un sistema estructurado de diagnóstico y viabilidad de alerta temprana.
+            </p>
+          </div>
+        </div>
+        <div>
+          <img src="assets/images/ilustracion_permanencia_ia.svg" alt="Esquema visual de prevención temprana y ética de IA en SIAAE-ML" style="width:100%; border-radius:14px; box-shadow: 0 10px 25px rgba(15,23,42,0.12);">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECCIÓN 4: OBJETIVOS GENERALES Y ESPECÍFICOS -->
+  <section id="objetivos" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 04 · Propósitos de la Investigación</span>
+      <h2 class="section-title">Objetivos Generales y Específicos</h2>
+      <p class="section-desc">
+        Definidos en correspondencia directa con la naturaleza agregada de la evidencia verificada y las exigencias académicas de la Maestría en Inteligencia Artificial Aplicada a la Educación y la Tecnología (UFHEC).
+      </p>
+    </div>
+
+    <div class="callout callout-info" style="margin-bottom: 1.75rem;">
+      <strong>🎯 Objetivo General:</strong><br>
+      Desarrollar el <strong>Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning (SIAAE-ML)</strong> para el Politécnico José Antonio Castillo Ferreiras durante los períodos académicos <code>2024-2025</code> y <code>2025-2026</code>, integrando el análisis estadístico comparativo de los 33 registros sección-año verificados, el modelado exploratorio de conteos y la evaluación técnica de viabilidad de algoritmos supervisados (Regresión Logística y Random Forest) como soporte a la toma de decisiones educativas.
+    </div>
+
+    <div class="grid-3">
+      <div class="card card-accent-blue">
+        <h3>Objetivo Específico 1 · Auditoría y ETL</h3>
+        <p>
+          Consolidar y auditar la base de datos institucional verificada de los períodos <code>2024-2025</code> y <code>2025-2026</code> ($n = 33$ secciones-año y $24$ abandonos), garantizando la exclusión de traslados y la trazabilidad documental en un diccionario de 17 variables.
+        </p>
+      </div>
+      <div class="card card-accent-teal">
+        <h3>Objetivo Específico 2 · Análisis Comparativo</h3>
+        <p>
+          Identificar patrones de concentración y variación interanual del abandono escolar según período lectivo, ciclo educativo, grado escolar (<code>1.º</code> a <code>6.º</code>), sección (<code>A, B, C, D</code>) y especialidad técnico-profesional del Segundo Ciclo.
+        </p>
+      </div>
+      <div class="card card-accent-amber">
+        <h3>Objetivo Específico 3 · Viabilidad ML</h3>
+        <p>
+          Evaluar metodológica y técnicamente la viabilidad de implementar clasificadores supervisados de <strong>Regresión Logística</strong> y <strong>Random Forest</strong>, determinando los requerimientos de microdatos individuales longitudinales necesarios para evitar la falacia ecológica.
+        </p>
+      </div>
+      <div class="card card-accent-navy">
+        <h3>Objetivo Específico 4 · Ecosistema Interactivo</h3>
+        <p>
+          Construir un ecosistema computacional reproducible integrado por un cuaderno de Google Colab, una aplicación interactiva en Streamlit y una plataforma web científica para GitHub Pages.
+        </p>
+      </div>
+      <div class="card card-accent-blue">
+        <h3>Objetivo Específico 5 · Gobernanza Ética</h3>
+        <p>
+          Establecer lineamientos de privacidad estudiantil (Ley No. 172-13 y normativas MINERD) y protocolos de intervención psicopedagógica preventiva con supervisión humana en el bucle (<em>Human-in-the-Loop</em>).
+        </p>
+      </div>
+      <div class="card card-accent-teal">
+        <h3>Objetivo Específico 6 · Recomendaciones</h3>
+        <p>
+          Formular recomendaciones estratégicas focalizadas para el Equipo de Gestión y el Departamento de Orientación del Politécnico José Antonio Castillo en las secciones identificadas con mayor incidencia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: CONTEXTO INSTITUCIONAL -->
+  <div class="section-alt">
+    <section id="contexto" class="section">
+      <div class="section-header">
+        <span class="section-num">Sección 05 · Escenario de Estudio</span>
+        <h2 class="section-title">Contexto Institucional: Politécnico José Antonio Castillo Ferreiras</h2>
+        <p class="section-desc">
+          Centro educativo público del Nivel Secundario y Modalidad Técnico-Profesional ubicado en la comunidad de Paso de Moca, Provincia Espaillat, República Dominicana.
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card card-accent-navy">
+          <h3>🏛️ Identificación Institucional</h3>
+          <ul style="padding-left: 1.2rem; font-size: 0.92rem; color: var(--slate-700);">
+            <li><strong>Centro:</strong> Politécnico José Antonio Castillo Ferreiras</li>
+            <li><strong>Comunidad:</strong> Paso de Moca, Municipio de Moca</li>
+            <li><strong>Provincia:</strong> Espaillat, República Dominicana</li>
+            <li><strong>Jurisdicción:</strong> Regional 06 La Vega · Distrito Educativo 06-06 Moca</li>
+            <li><strong>Períodos Estudiados:</strong> 2024-2025 y 2025-2026</li>
+          </ul>
+        </div>
+        <div class="card card-accent-blue">
+          <h3>📘 Primer Ciclo (Grados 1.º, 2.º y 3.º)</h3>
+          <p style="margin-bottom: 0.6rem;">
+            Corresponde al Ciclo General del Nivel Secundario, común a todo el estudiantado antes de la diferenciación técnica:
+          </p>
+          <ul style="padding-left: 1.2rem; font-size: 0.92rem; color: var(--slate-700);">
+            <li><strong>1.º de Secundaria:</strong> Secciones A, B, C y D (en 2024-2025); A, B y C reportadas en 2025-2026 (<code>1.º D</code> no reportada).</li>
+            <li><strong>2.º de Secundaria:</strong> Secciones A y B en ambos períodos.</li>
+            <li><strong>3.º de Secundaria:</strong> Secciones A y B en ambos períodos.</li>
+          </ul>
+        </div>
+        <div class="card card-accent-teal">
+          <h3>⚙️ Segundo Ciclo Técnico-Profesional (4.º, 5.º y 6.º)</h3>
+          <p style="margin-bottom: 0.6rem;">
+            En los grados <code>4.º</code>, <code>5.º</code> y <code>6.º</code>, la letra de la sección identifica la especialidad formativa:
+          </p>
+          <ul style="padding-left: 1.2rem; font-size: 0.92rem; color: var(--slate-700);">
+            <li><strong>Sección A:</strong> Producción Agropecuaria</li>
+            <li><strong>Sección B:</strong> Comercio y Mercadeo</li>
+            <li><strong>Sección C:</strong> Gestión Administrativa y Tributaria</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECCIÓN 6: METODOLOGÍA CRISP-ML -->
+  <section id="metodologia" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 06 · Diseño Metodológico</span>
+      <h2 class="section-title">Metodología CRISP-ML(Q) Aplicada al Proyecto</h2>
+      <p class="section-desc">
+        Se adoptó el estándar <strong>CRISP-ML(Q)</strong> (<em>Cross-Industry Standard Process for the Development of Machine Learning Applications with Quality Assurance</em>), asegurando control de calidad de datos, trazabilidad documental y prevención de sesgos en sus 6 fases.
+      </p>
+    </div>
+
+    <div style="margin-bottom: 1.8rem;">
+      <img src="assets/images/diagrama_crisp_ml.svg" alt="Diagrama del flujo metodológico CRISP-ML(Q) en 6 etapas" style="width:100%; border-radius:14px; box-shadow: 0 6px 18px rgba(15,23,42,0.08);">
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Fase 1 y 2: Problema y Datos</h3>
+        <p>Delimitación conceptual del abandono (excluyendo traslados) y auditoría cruzada de las 33 observaciones sección-año entre el informe institucional verificado y el cuaderno computacional.</p>
+      </div>
+      <div class="card">
+        <h3>Fase 3 y 4: Preparación, EDA y Viabilidad</h3>
+        <p>Ingeniería de variables estructurales (`es_periodo_2`, `ciclo_num`, `es_segundo_ciclo`, `grado_alto`), análisis comparativo multidimensional, regresión de conteos y diseño supervisado para Fase II.</p>
+      </div>
+      <div class="card">
+        <h3>Fase 5 y 6: Despliegue y Gobernanza</h3>
+        <p>Implementación reproducible en Google Colab, Streamlit Community Cloud y GitHub Pages, bajo principios de protección de datos personales (Ley 172-13) y orientación psicopedagógica.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: DATOS DE 2024-2025 Y 2025-2026 -->
+  <div class="section-alt">
+    <section id="datos" class="section">
+      <div class="section-header">
+        <span class="section-num">Sección 07 · Evidencia Empírica Verificada</span>
+        <h2 class="section-title">Datos Institucionales de los Períodos 2024-2025 y 2025-2026</h2>
+        <p class="section-desc">
+          Explore de forma interactiva los <strong>33 registros sección-año</strong> y las matrices comparativas consolidadas del Politécnico José Antonio Castillo Ferreiras.
+        </p>
+      </div>
+
+      <!-- Tabla Resumen Comparativa por Ciclo, Grado y Especialidad -->
+      <h3 style="margin-bottom: 0.6rem; color: var(--navy-900);">7.1 Cuadro Comparativo Consolidado por Dimensión Institucional</h3>
+      <div class="table-wrapper" style="margin-bottom: 2.2rem;">
+        <table class="academic-table">
+          <thead>
+            <tr>
+              <th>Dimensión</th>
+              <th>Categoría Institucional</th>
+              <th class="num-col">Secc. 24-25</th>
+              <th class="num-col">Secc. 25-26</th>
+              <th class="num-col">Aband. 24-25</th>
+              <th class="num-col">Aband. 25-26</th>
+              <th class="num-col">Total Bienio</th>
+              <th class="num-col">Variación</th>
+              <th class="num-col">% del Total (24)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Total Institucional</strong></td>
+              <td><strong>Politécnico José Antonio Castillo Ferreiras</strong></td>
+              <td class="num-col">17</td>
+              <td class="num-col">16*</td>
+              <td class="num-col"><strong>9</strong></td>
+              <td class="num-col"><strong>15</strong></td>
+              <td class="num-col"><strong>24</strong></td>
+              <td class="num-col">+6 (+66.7%)</td>
+              <td class="num-col">100.0%</td>
+            </tr>
+            <tr>
+              <td>Ciclo Educativo</td>
+              <td>Primer Ciclo (1.º a 3.º de Secundaria)</td>
+              <td class="num-col">8</td>
+              <td class="num-col">7</td>
+              <td class="num-col">6</td>
+              <td class="num-col">10</td>
+              <td class="num-col"><strong>16</strong></td>
+              <td class="num-col">+4 (+66.7%)</td>
+              <td class="num-col">66.7%</td>
+            </tr>
+            <tr>
+              <td>Ciclo Educativo</td>
+              <td>Segundo Ciclo Técnico-Profesional (4.º a 6.º)</td>
+              <td class="num-col">9</td>
+              <td class="num-col">9</td>
+              <td class="num-col">3</td>
+              <td class="num-col">5</td>
+              <td class="num-col"><strong>8</strong></td>
+              <td class="num-col">+2 (+66.7%)</td>
+              <td class="num-col">33.3%</td>
+            </tr>
+            <tr>
+              <td>Grado Escolar</td>
+              <td>1.º de Secundaria (Primer Ciclo)</td>
+              <td class="num-col">4</td>
+              <td class="num-col">3</td>
+              <td class="num-col">1</td>
+              <td class="num-col">6</td>
+              <td class="num-col"><strong>7</strong></td>
+              <td class="num-col">+5 (+500.0%)</td>
+              <td class="num-col">29.2%</td>
+            </tr>
+            <tr>
+              <td>Grado Escolar</td>
+              <td>2.º de Secundaria (Primer Ciclo)</td>
+              <td class="num-col">2</td>
+              <td class="num-col">2</td>
+              <td class="num-col">4</td>
+              <td class="num-col">3</td>
+              <td class="num-col"><strong>7</strong></td>
+              <td class="num-col">-1 (-25.0%)</td>
+              <td class="num-col">29.2%</td>
+            </tr>
+            <tr>
+              <td>Grado Escolar</td>
+              <td>3.º de Secundaria (Primer Ciclo)</td>
+              <td class="num-col">2</td>
+              <td class="num-col">2</td>
+              <td class="num-col">1</td>
+              <td class="num-col">1</td>
+              <td class="num-col"><strong>2</strong></td>
+              <td class="num-col">0 (0.0%)</td>
+              <td class="num-col">8.3%</td>
+            </tr>
+            <tr>
+              <td>Grado Escolar</td>
+              <td>4.º de Secundaria (Segundo Ciclo Técnico)</td>
+              <td class="num-col">3</td>
+              <td class="num-col">3</td>
+              <td class="num-col">2</td>
+              <td class="num-col">2</td>
+              <td class="num-col"><strong>4</strong></td>
+              <td class="num-col">0 (0.0%)</td>
+              <td class="num-col">16.7%</td>
+            </tr>
+            <tr>
+              <td>Grado Escolar</td>
+              <td>5.º de Secundaria (Segundo Ciclo Técnico)</td>
+              <td class="num-col">3</td>
+              <td class="num-col">3</td>
+              <td class="num-col">1</td>
+              <td class="num-col">3</td>
+              <td class="num-col"><strong>4</strong></td>
+              <td class="num-col">+2 (+200.0%)</td>
+              <td class="num-col">16.7%</td>
+            </tr>
+            <tr>
+              <td>Grado Escolar</td>
+              <td>6.º de Secundaria (Segundo Ciclo Técnico)</td>
+              <td class="num-col">3</td>
+              <td class="num-col">3</td>
+              <td class="num-col">0</td>
+              <td class="num-col">0</td>
+              <td class="num-col"><strong>0</strong></td>
+              <td class="num-col">0 (0.0%)</td>
+              <td class="num-col">0.0%</td>
+            </tr>
+            <tr>
+              <td>Especialidad (2.º Ciclo)</td>
+              <td>Producción Agropecuaria (Secciones A: 4.º-6.º)</td>
+              <td class="num-col">3</td>
+              <td class="num-col">3</td>
+              <td class="num-col">2</td>
+              <td class="num-col">4</td>
+              <td class="num-col"><strong>6</strong></td>
+              <td class="num-col">+2 (+100.0%)</td>
+              <td class="num-col">25.0% (75% del 2.º Ciclo)</td>
+            </tr>
+            <tr>
+              <td>Especialidad (2.º Ciclo)</td>
+              <td>Comercio y Mercadeo (Secciones B: 4.º-6.º)</td>
+              <td class="num-col">3</td>
+              <td class="num-col">3</td>
+              <td class="num-col">1</td>
+              <td class="num-col">0</td>
+              <td class="num-col"><strong>1</strong></td>
+              <td class="num-col">-1 (-100.0%)</td>
+              <td class="num-col">4.2% (12.5% del 2.º Ciclo)</td>
+            </tr>
+            <tr>
+              <td>Especialidad (2.º Ciclo)</td>
+              <td>Gestión Administrativa y Tributaria (Secciones C: 4.º-6.º)</td>
+              <td class="num-col">3</td>
+              <td class="num-col">3</td>
+              <td class="num-col">0</td>
+              <td class="num-col">1</td>
+              <td class="num-col"><strong>1</strong></td>
+              <td class="num-col">+1 (N/A)</td>
+              <td class="num-col">4.2% (12.5% del 2.º Ciclo)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Explorador Interactivo JS de los 33 Registros -->
+      <h3 style="margin-bottom: 0.6rem; color: var(--navy-900);">7.2 Explorador Interactivo de los 33 Registros Sección-Año Verificados</h3>
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label for="filtro-anio">Período Escolar</label>
+          <select id="filtro-anio">
+            <option value="TODOS">Todos los períodos (33)</option>
+            <option value="2024-2025">2024-2025 (17 secciones)</option>
+            <option value="2025-2026">2025-2026 (16 secciones)</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filtro-ciclo">Ciclo Educativo</label>
+          <select id="filtro-ciclo">
+            <option value="TODOS">Ambos ciclos</option>
+            <option value="Primer Ciclo">Primer Ciclo (1.º a 3.º)</option>
+            <option value="Segundo Ciclo">Segundo Ciclo (4.º a 6.º)</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filtro-grado">Grado Escolar</label>
+          <select id="filtro-grado">
+            <option value="TODOS">Todos los grados (1.º a 6.º)</option>
+            <option value="1">1.º de Secundaria</option>
+            <option value="2">2.º de Secundaria</option>
+            <option value="3">3.º de Secundaria</option>
+            <option value="4">4.º de Secundaria</option>
+            <option value="5">5.º de Secundaria</option>
+            <option value="6">6.º de Secundaria</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filtro-esp">Nivel / Especialidad Técnica</label>
+          <select id="filtro-esp">
+            <option value="TODOS">Todas las especialidades</option>
+            <option value="Nivel Secundario General (1.er Ciclo)">Nivel Secundario General (1.er Ciclo)</option>
+            <option value="Producción Agropecuaria">Producción Agropecuaria</option>
+            <option value="Comercio y Mercadeo">Comercio y Mercadeo</option>
+            <option value="Gestión Administrativa y Tributaria">Gestión Administrativa y Tributaria</option>
+          </select>
+        </div>
+        <button id="btn-reset-filtros" type="button" class="btn btn-primary" style="padding: 0.58rem 1.1rem;">Restablecer</button>
+      </div>
+
+      <div id="resumen-filtro-dinamico" class="callout callout-info" style="margin-top: 0.5rem; margin-bottom: 0.85rem;"></div>
+
+      <div class="table-wrapper" style="max-height: 460px; overflow-y: auto;">
+        <table class="academic-table">
+          <thead>
+            <tr>
+              <th class="num-col">ID</th>
+              <th>Año Escolar</th>
+              <th>Ciclo Educativo</th>
+              <th class="num-col">Grado</th>
+              <th>Sección</th>
+              <th>Grupo</th>
+              <th>Nivel / Especialidad Técnico-Profesional</th>
+              <th class="num-col">Abandonos</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-registros-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECCIÓN 8: GRÁFICOS Y RESULTADOS VERIFICADOS -->
+  <section id="graficos" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 08 · Visualización Científica</span>
+      <h2 class="section-title">Gráficos y Resultados Verificados del Estudio</h2>
+      <p class="section-desc">
+        Galería completa de las 6 figuras analíticas en formato vectorial de alta resolución (<code>SVG</code>) generadas a partir de los 33 registros verificados, con su respectiva interpretación académica.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="figure-card">
+        <img src="results/figures/fig1_abandono_por_periodo.svg" alt="Figura 1: Abandono escolar por período lectivo">
+        <div class="figure-caption">
+          <strong>Figura 1. Comparación interanual por período (2024-2025 vs. 2025-2026):</strong> El conteo total aumentó de 9 a 15 casos (+66.7%), mientras que el promedio por sección reportada subió de 0.5294 a 0.9375 (+77.1%).
+        </div>
+      </div>
+
+      <div class="figure-card">
+        <img src="results/figures/fig2_abandono_por_ciclo.svg" alt="Figura 2: Abandono escolar por ciclo educativo">
+        <div class="figure-caption">
+          <strong>Figura 2. Distribución por Ciclo Educativo:</strong> El Primer Ciclo (1.º a 3.º) concentra exactamente dos terceras partes del abandono institucional (16 de 24 casos, 66.7%), frente a 8 casos (33.3%) en el Segundo Ciclo Técnico.
+        </div>
+      </div>
+
+      <div class="figure-card">
+        <img src="results/figures/fig3_abandono_por_grado.svg" alt="Figura 3: Abandono escolar por grado">
+        <div class="figure-caption">
+          <strong>Figura 3. Evolución por Grado Escolar (1.º a 6.º):</strong> Los grados 1.º y 2.º acumulan 7 casos cada uno (58.3% del total). En 2025-2026 el pico se desplazó a 1.º (6 casos), mientras que 6.º grado mantuvo 0 abandonos en ambos períodos.
+        </div>
+      </div>
+
+      <div class="figure-card">
+        <img src="results/figures/fig4_abandono_por_seccion_y_especialidad.svg" alt="Figura 4: Abandono por sección y especialidad técnica">
+        <div class="figure-caption">
+          <strong>Figura 4. Desglose por Sección y Especialidad Técnica:</strong> Dentro del Segundo Ciclo, Producción Agropecuaria (secciones A) concentra el 75.0% de los casos del ciclo (6 de 8), frente a Comercio y Mercadeo (1) y Gestión Administrativa y Tributaria (1).
+        </div>
+      </div>
+
+      <div class="figure-card">
+        <img src="results/figures/fig5_mapa_calor_grado_periodo.svg" alt="Figura 5: Mapa de calor sección por período">
+        <div class="figure-caption">
+          <strong>Figura 5. Mapa de Calor Institucional por Sección y Período:</strong> Permite visualizar el foco crítico puntual en <code>1.º C</code> (4 casos en 2025-2026), la persistencia de <code>2.º B</code> (2 y 2 casos) y la condición de <code>1.º D</code> como no reportada en 2025-2026.
+        </div>
+      </div>
+
+      <div class="figure-card">
+        <img src="results/figures/fig6_distribucion_conteos_seccion.svg" alt="Figura 6: Distribución estadística de conteos por sección">
+        <div class="figure-caption">
+          <strong>Figura 6. Distribución Estadística de Conteos (n = 33):</strong> El 51.5% de las secciones-año (17) registró 0 abandonos, mientras que las 6 secciones con ≥ 2 casos (18.2%) concentran el 58.3% de todos los abandonos del bienio.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 9: HERRAMIENTAS TECNOLÓGICAS -->
+  <div class="section-alt">
+    <section id="herramientas" class="section">
+      <div class="section-header">
+        <span class="section-num">Sección 09 · Stack Tecnológico</span>
+        <h2 class="section-title">Herramientas Tecnológicas y Ecosistema Computacional</h2>
+        <p class="section-desc">
+          Arquitectura modular basada en software libre y estándares abiertos para ciencia de datos, aprendizaje automático y despliegue web reproducible.
+        </p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card card-accent-blue">
+          <h3>🐍 Python 3.11+ & Pandas</h3>
+          <p>Procesamiento tabular, validación de integridad de datos, ingeniería de características (ETL) y generación de matrices comparativas.</p>
+        </div>
+        <div class="card card-accent-teal">
+          <h3>🤖 Scikit-Learn</h3>
+          <p>Modelado exploratorio de conteos (<code>DummyRegressor</code> y <code>PoissonRegressor</code> con validación <code>LeaveOneGroupOut</code>) y marco técnico para clasificadores supervisados.</p>
+        </div>
+        <div class="card card-accent-amber">
+          <h3>📊 Plotly, Matplotlib & SVG</h3>
+          <p>Visualización científica estática de alta resolución y gráficos interactivos dinámicos para exploración multidimensional.</p>
+        </div>
+        <div class="card card-accent-navy">
+          <h3>🚀 Streamlit, Colab & GitHub</h3>
+          <p>Cuaderno reproducible en Google Colab, aplicación interactiva en Streamlit Community Cloud y portal web en capas para GitHub Pages.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECCIÓN 10: EXPLICACIÓN DEL LABORATORIO DE MACHINE LEARNING -->
+  <section id="laboratorio-ml" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 10 · Ciencia de Datos y Machine Learning</span>
+      <h2 class="section-title">Laboratorio de Machine Learning: Conteos Agregados vs. Predicción Individual</h2>
+      <p class="section-desc">
+        Fundamentación metodológica de la diferencia entre el modelado exploratorio de conteos por sección ($n = 33$) y la predicción supervisada individual mediante <strong>Regresión Logística</strong> y <strong>Random Forest</strong>.
+      </p>
+    </div>
+
+    <div class="callout callout-warn">
+      <strong>⚖️ Principio de Rigor Metodológico (Prevención de la Falacia Ecológica):</strong><br>
+      Los 33 registros disponibles describen <strong>conteos agregados por sección escolar</strong> ($y_j \in \{0, 1, 2, 4\}$) sin el denominador de matrícula por aula ni vectores individuales de los alumnos que permanecieron ($y_i = 0$). Entrenar hoy un clasificador binario individual sobre 33 filas agregadas incurriría en <em>falacia ecológica</em> y <em>sobreajuste severo</em>. Por ello, SIAAE-ML ejecuta modelos de conteo a nivel de sección y diseña formalmente la arquitectura supervisada para la Fase II.
+    </div>
+
+    <div class="grid-2" style="margin-top: 1.5rem; margin-bottom: 1.75rem;">
+      <div class="card card-accent-blue">
+        <h3>📐 Modelo A (Fase II): Regresión Logística Binaria</h3>
+        <p style="margin-bottom: 0.65rem;">
+          Estima la probabilidad condicional de abandono individual $P(y_i = 1 \mid \mathbf{x}_i) = \frac{1}{1 + e^{-(\beta_0 + \boldsymbol{\beta}^\top \mathbf{x}_i)}}$ a partir de indicadores medidos en el primer bimestre.
+        </p>
+        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--slate-700);">
+          <li><strong>Interpretabilidad directa:</strong> Cada coeficiente $\beta_k$ produce un <em>Odds Ratio</em> ($\text{OR}_k = e^{\beta_k}$) auditable por Orientación Escolar.</li>
+          <li><strong>Calibración natural:</strong> Permite definir umbrales preventivos ($\tau$) priorizando la sensibilidad (<em>Recall</em>).</li>
+        </ul>
+      </div>
+
+      <div class="card card-accent-teal">
+        <h3>🌲 Modelo B (Fase II): Random Forest Classifier</h3>
+        <p style="margin-bottom: 0.65rem;">
+          Ensamble no paramétrico de árboles de decisión ($\hat{P}_{\text{RF}} = \frac{1}{B}\sum_{b=1}^{B} \hat{P}_{T_b}$) entrenados mediante <em>bagging</em> y selección aleatoria de atributos.
+        </p>
+        <ul style="padding-left: 1.2rem; font-size: 0.9rem; color: var(--slate-700);">
+          <li><strong>Interacciones no lineales:</strong> Captura combinaciones críticas (p. ej. <em>1.º o 2.º grado + asistencia &lt; 80% + sobreedad</em>).</li>
+          <li><strong>Jerarquización de factores:</strong> Cuantifica la importancia relativa mediante impureza de Gini, permutación y valores SHAP.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Demostrador Matemático Pedagógico en JS -->
+    <div class="card" style="background: var(--slate-50); border: 1px solid var(--slate-300);">
+      <h3>🎛️ Demostrador Matemático Didáctico: Función Sigmoide de Regresión Logística</h3>
+      <p style="margin-bottom: 1rem; font-size: 0.88rem; color: var(--slate-600);">
+        Ajuste los parámetros teóricos para observar cómo la combinación lineal $z = \beta_0 + \beta_1 x$ se transforma en probabilidad $\sigma(z) \in (0, 1)$ y en razón de momios ($\text{OR} = e^{\beta_1}$). <em>(Simulación matemática conceptual, no entrenada sobre alumnos individuales).</em>
+      </p>
+      <div class="grid-3" style="margin-bottom: 1rem;">
+        <div>
+          <label style="font-size:0.82rem; font-weight:700;">Intercepto teórico β₀: <span id="val-b0">-1.50</span></label>
+          <input id="demo-b0" type="range" min="-4" max="2" step="0.25" value="-1.5" style="width:100%; margin-top:0.35rem;">
+        </div>
+        <div>
+          <label style="font-size:0.82rem; font-weight:700;">Pendiente teórica β₁: <span id="val-b1">1.00</span></label>
+          <input id="demo-b1" type="range" min="-2.5" max="2.5" step="0.25" value="1.0" style="width:100%; margin-top:0.35rem;">
+        </div>
+        <div>
+          <label style="font-size:0.82rem; font-weight:700;">Valor del predictor x: <span id="val-x">1.00</span></label>
+          <input id="demo-x" type="range" min="-3" max="3" step="0.25" value="1.0" style="width:100%; margin-top:0.35rem;">
+        </div>
+      </div>
+      <div id="demo-logit-output" class="callout callout-info" style="margin: 0;"></div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 11: APLICACIÓN STREAMLIT -->
+  <div class="section-alt">
+    <section id="streamlit" class="section">
+      <div class="section-header">
+        <span class="section-num">Sección 11 · Plataforma Interactiva en la Nube</span>
+        <h2 class="section-title">Aplicación Web Interactiva en Streamlit Community Cloud</h2>
+        <p class="section-desc">
+          La aplicación <code>app.py</code> despliega el cuadro de mando interactivo en dos pestañas especializadas alimentadas por los archivos verificados de <code>data/processed/</code>.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-accent-blue">
+          <h3>📊 Pestaña 1: Análisis del Abandono Escolar</h3>
+          <p>
+            Incluye filtros dinámicos en barra lateral por período (<code>2024-2025</code> y <code>2025-2026</code>), ciclo educativo, grado (<code>1.º</code> a <code>6.º</code>) y especialidad técnico-profesional; 4 tarjetas KPI; 6 gráficos interactivos en Plotly; matriz de calor institucional y descarga directa en CSV.
+          </p>
+        </div>
+        <div class="card card-accent-teal">
+          <h3>🤖 Pestaña 2: Laboratorio de Machine Learning</h3>
+          <p>
+            Desarrolla la comparación conceptual y matemática entre Regresión Logística y Random Forest, el simulador pedagógico de curvas sigmoides e impureza de Gini, los resultados del modelado de conteos (<code>PoissonRegressor</code>) y la matriz de requisitos para Fase II.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout callout-info" style="margin-top: 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <strong>🔗 Enlace Oficial de Despliegue en Streamlit Community Cloud:</strong><br>
+          <span>Aplicación interactiva en vivo vinculada a la rama <code>main</code> del repositorio oficial: <a href="https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/" target="_blank" rel="noopener noreferrer" style="font-weight:700; color:var(--blue-700);">https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/</a></span>
+        </div>
+        <a href="https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">🚀 Ejecutar Aplicación en Vivo (Streamlit)</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECCIÓN 12: VIDEO EXPLICATIVO (ESPACIO RESERVADO HASTA PRODUCIRLO) -->
+  <section id="video" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 12 · Producción Audiovisual Científica</span>
+      <h2 class="section-title">Video Explicativo del Proyecto SIAAE-ML (En Español)</h2>
+      <p class="section-desc">
+        Espacio reservado para la presentación audiovisual ejecutiva del proyecto académico, a desarrollarse en el Bloque D mediante la herramienta <strong>BRAG</strong> o alternativa compatible verificada.
+      </p>
+    </div>
+
+    <div class="video-placeholder">
+      <h3>🎬 Espacio Reservado para el Video Explicativo Oficial (Bloque D)</h3>
+      <p style="max-width: 760px; margin: 0 auto 1.2rem; color: var(--slate-300);">
+        De acuerdo con el protocolo de integridad académica del proyecto <strong>SIAAE-ML</strong>, este contenedor permanece reservado hasta la verificación técnica de la herramienta
+        <a href="https://github.com/latent-spaces/brag.git" target="_blank" rel="noopener noreferrer" style="color: var(--sky-400);">latent-spaces/brag</a>
+        y la producción efectiva del video explicativo en español.
+      </p>
+      <span class="badge-ufhec" style="margin-bottom: 0;">Estado actual: En espera de autorización del Bloque D</span>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 13: AUTOR E INSTITUCIÓN ACADÉMICA -->
+  <div class="section-alt">
+    <section id="autor" class="section">
+      <div class="section-header">
+        <span class="section-num">Sección 13 · Créditos Académicos</span>
+        <h2 class="section-title">Autor e Institución Académica</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card card-accent-navy">
+          <h3>👨‍💻 Autor del Proyecto</h3>
+          <p style="font-size: 1.05rem; font-weight: 700; color: var(--blue-900); margin-bottom: 0.4rem;">
+            Ing. Adonamil Cruz Evangelista
+          </p>
+          <p style="margin-bottom: 0.75rem;">
+            Maestrante en Inteligencia Artificial Aplicada a la Educación y la Tecnología — Universidad Federico Henríquez y Carvajal (UFHEC).
+          </p>
+          <p style="font-size: 0.9rem; color: var(--slate-600);">
+            Investigación orientada al fortalecimiento de la permanencia escolar y la toma de decisiones basada en datos en el Politécnico José Antonio Castillo Ferreiras.
+          </p>
+        </div>
+
+        <div class="card card-accent-blue">
+          <h3>🏛️ Marco Institucional Universitario y Escolar</h3>
+          <ul style="padding-left: 1.2rem; font-size: 0.92rem; color: var(--slate-700);">
+            <li><strong>Universidad:</strong> Universidad Federico Henríquez y Carvajal (UFHEC)</li>
+            <li><strong>Programa de Posgrado:</strong> Maestría en Inteligencia Artificial Aplicada a la Educación y la Tecnología</li>
+            <li><strong>Asignatura:</strong> Machine Learning</li>
+            <li><strong>Centro Objeto del Estudio:</strong> Politécnico José Antonio Castillo Ferreiras (Paso de Moca, R.D.)</li>
+            <li><strong>Aplicación Interactiva (Streamlit):</strong> <a href="https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/" target="_blank" rel="noopener noreferrer">siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app</a></li>
+            <li><strong>Repositorio Oficial:</strong> <a href="https://github.com/adonamil46/SIAAE-ML-Abandono-Escolar.git" target="_blank" rel="noopener noreferrer">github.com/adonamil46/SIAAE-ML-Abandono-Escolar.git</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SECCIÓN 14: CONCLUSIONES Y RECOMENDACIONES -->
+  <section id="conclusiones" class="section">
+    <div class="section-header">
+      <span class="section-num">Sección 14 · Síntesis Estratégica</span>
+      <h2 class="section-title">Conclusiones y Recomendaciones Institucionales</h2>
+      <p class="section-desc">
+        Derivadas estrictamente de los hallazgos empíricos comprobados en los períodos <code>2024-2025</code> y <code>2025-2026</code> y de la evaluación de viabilidad de Machine Learning.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card card-accent-blue">
+        <h3>📌 Conclusiones Principales</h3>
+        <ol style="padding-left: 1.25rem; font-size: 0.93rem; color: var(--slate-700); display:flex; flex-direction:column; gap:0.6rem;">
+          <li><strong>Incremento interanual verificado:</strong> El abandono confirmado en el centro pasó de 9 casos en <code>2024-2025</code> a 15 casos en <code>2025-2026</code> (+6 casos, +66.7% en el conteo absoluto), elevando el promedio por sección de 0.5294 a 0.9375.</li>
+          <li><strong>Vulnerabilidad crítica en el Primer Ciclo:</strong> El Primer Ciclo (<code>1.º</code> a <code>3.º</code>) concentra el <strong>66.7%</strong> de todos los abandonos (16 de 24 casos), siendo <code>1.º</code> y <code>2.º</code> de secundaria los grados de mayor riesgo (7 casos cada uno, 58.3% del total).</li>
+          <li><strong>Foco en el Segundo Ciclo Técnico:</strong> De los 8 abandonos registrados en el Segundo Ciclo, la especialidad de <strong>Producción Agropecuaria (Sección A)</strong> concentra 6 casos (75.0% del ciclo), mientras que <code>6.º</code> grado registró <strong>0 abandonos</strong> en ambos años.</li>
+          <li><strong>Viabilidad metodológica de ML:</strong> Los 33 registros agregados permiten modelar conteos por sección, pero el entrenamiento de clasificadores individuales (Regresión Logística y Random Forest) requiere recolectar microdatos longitudinales por estudiante con denominadores de matrícula verificados.</li>
+        </ol>
+      </div>
+
+      <div class="card card-accent-teal">
+        <h3>💡 Recomendaciones Estratégicas</h3>
+        <ol style="padding-left: 1.25rem; font-size: 0.93rem; color: var(--slate-700); display:flex; flex-direction:column; gap:0.6rem;">
+          <li><strong>Intervención psicopedagógica prioritaria en secciones críticas:</strong> Desplegar acompañamiento intensivo del Departamento de Orientación y Psicología en <code>1.º C</code> (4 casos en 2025-2026), <code>2.º B</code> (4 casos en el bienio), <code>2.º A</code> (3 casos), <code>4.º A</code> (3 casos) y <code>5.º A</code> (3 casos).</li>
+          <li><strong>Programa de acogida y nivelación en 1.º y 2.º grado:</strong> Establecer tutorías tempranas de transición a la educación secundaria durante las primeras 8 semanas del año escolar.</li>
+          <li><strong>Acompañamiento motivacional y práctico en Producción Agropecuaria:</strong> Revisar las demandas pedagógicas y de apoyo estudiantil en <code>4.º A</code> y <code>5.º A</code> para reducir su brecha frente a las demás especialidades técnicas.</li>
+          <li><strong>Implementación de la Fase II de captura de datos (SAT):</strong> Registrar en formato digital anonimizado la matrícula inicial por sección ($N_j$), el porcentaje de asistencia del primer bimestre, las calificaciones parciales (P1) y la sobreedad para entrenar los modelos de Regresión Logística y Random Forest diseñados en SIAAE-ML.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <strong style="color:#ffffff; font-size:1rem;">SIAAE-ML · Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning</strong><br>
+        <span>Universidad Federico Henríquez y Carvajal (UFHEC) · Maestría en Inteligencia Artificial Aplicada a la Educación y la Tecnología</span><br>
+        <span>Politécnico José Antonio Castillo Ferreiras (Paso de Moca, Provincia Espaillat, República Dominicana)</span>
+      </div>
+      <div style="text-align: right;">
+        <strong>Autor:</strong> Ing. Adonamil Cruz Evangelista<br>
+        <span>Períodos analizados: 2024-2025 y 2025-2026</span><br>
+        <a href="https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/" target="_blank" rel="noopener noreferrer" style="color: var(--sky-400); text-decoration:none; margin-right: 0.85rem;">Aplicación Streamlit →</a>
+        <a href="https://github.com/adonamil46/SIAAE-ML-Abandono-Escolar.git" target="_blank" rel="noopener noreferrer" style="color: var(--sky-400); text-decoration:none;">Repositorio GitHub Oficial →</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

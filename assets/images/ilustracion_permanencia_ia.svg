@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="860" height="360" rx="18" fill="url(#panelBg)"/>
+
+  <!-- Bloque Izquierdo: Permanencia y Orientación -->
+  <rect x="28" y="28" width="388" height="304" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="50" y="62" fill="#38bdf8" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800">
+    1. FOCO DE PREVENCIÓN TEMPRANA
+  </text>
+  <text x="50" y="90" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">
+    Transición al Primer Ciclo (1.º y 2.º)
+  </text>
+  <text x="50" y="118" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12.5">
+    • Concentra 14 de los 24 abandonos (58.3% del total).
+  </text>
+  <text x="50" y="142" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12.5">
+    • Sección crítica puntual: 1.º C en 2025-2026 (4 casos).
+  </text>
+  <text x="50" y="166" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12.5">
+    • Sección persistente: 2.º B (2 casos por período = 4).
+  </text>
+
+  <rect x="50" y="192" width="344" height="115" rx="10" fill="#0f172a" stroke="#0d9488"/>
+  <text x="68" y="218" fill="#2dd4bf" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="700">
+    SEGUNDO CICLO TÉCNICO-PROFESIONAL (4.º A 6.º)
+  </text>
+  <text x="68" y="242" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">
+    • Producción Agropecuaria (A): 6 de 8 casos (75.0%).
+  </text>
+  <text x="68" y="264" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">
+    • Comercio y Mercadeo (B): 1 caso (12.5%).
+  </text>
+  <text x="68" y="286" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">
+    • Gestión Adm. y Tributaria (C): 1 caso (12.5%).
+  </text>
+
+  <!-- Bloque Derecho: IA Responsable y Alerta Temprana -->
+  <rect x="444" y="28" width="388" height="304" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="466" y="62" fill="#fbbf24" font-family="Segoe UI, sans-serif" font-size="14" font-weight="800">
+    2. SISTEMA INTELIGENTE DE APOYO (SAT)
+  </text>
+  <text x="466" y="90" fill="#f8fafc" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">
+    Del Conteo Agregado a la Alerta Individual
+  </text>
+  <text x="466" y="118" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12.5">
+    • Fase I (Actual): Diagnóstico real por sección (n = 33).
+  </text>
+  <text x="466" y="142" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12.5">
+    • Fase II (Propuesta): Microdatos individuales pre-abandono.
+  </text>
+  <text x="466" y="166" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="12.5">
+    • Modelos: Regresión Logística (OR) + Random Forest.
+  </text>
+
+  <rect x="466" y="192" width="344" height="115" rx="10" fill="#0f172a" stroke="#2563eb"/>
+  <text x="484" y="218" fill="#60a5fa" font-family="Segoe UI, sans-serif" font-size="12.5" font-weight="700">
+    PRINCIPIOS ÉTICOS Y PEDAGÓGICOS
+  </text>
+  <text x="484" y="242" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">
+    ✓ Cero invención de registros o tasas sin matrícula.
+  </text>
+  <text x="484" y="264" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">
+    ✓ Exclusión rigurosa de traslados escolares.
+  </text>
+  <text x="484" y="286" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="12">
+    ✓ Intervención orientadora (Ley 172-13 / MINERD).
+  </text>
+</svg>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Calidad de Datos — SIAAE-ML (UFHEC)</title>
+  <style>
+    :root {
+      --navy: #0f172a;
+      --blue: #1e3a8a;
+      --accent: #2563eb;
+      --teal: #0d9488;
+      --amber: #d97706;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --text: #1e293b;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 32px 20px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      color: #ffffff;
+      padding: 28px 32px;
+      border-radius: 14px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.16);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    header p {
+      margin: 4px 0;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    }
+    .kpi-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .kpi-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 6px 0 2px 0;
+    }
+    .kpi-sub {
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 18px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background-color: #f1f5f9;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    tr:hover {
+      background-color: #f8fafc;
+    }
+    .num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .status-ok {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .status-warn {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #fef3c7;
+      color: #92400e;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .alert-box {
+      background: #eff6ff;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-size: 13.5px;
+      margin-top: 12px;
+    }
+    footer {
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Auditoría de Calidad de Datos · Bloque A</span>
+      <h1>Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning (SIAAE-ML)</h1>
+      <p><strong>Centro Educativo:</strong> Politécnico José Antonio Castillo Ferreiras (Paso de Moca, R.D. — Distrito Educativo 06-06)</p>
+      <p><strong>Universidad:</strong> Universidad Federico Henríquez y Carvajal (UFHEC) · <strong>Autor:</strong> Ing. Adonamil Cruz Evangelista</p>
+    </header>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Observaciones Verificadas</div>
+        <div class="kpi-value">33</div>
+        <div class="kpi-sub">17 (2024-2025) · 16 (2025-2026)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Abandonos Totales</div>
+        <div class="kpi-value">24</div>
+        <div class="kpi-sub">9 (2024-2025) · 15 (2025-2026)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Completitud de Celdas</div>
+        <div class="kpi-value">100.0%</div>
+        <div class="kpi-sub">0 valores nulos en las 33 filas</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Filas Duplicadas</div>
+        <div class="kpi-value">0</div>
+        <div class="kpi-sub">Clave única: (anio_escolar, grado, seccion)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Promedio Global</div>
+        <div class="kpi-value">0.7273</div>
+        <div class="kpi-sub">Desv. estándar muestral: 0.9445</div>
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2>1. Diagnóstico de Integridad y Esquema de Variables (Dataset Procesado)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Tipo Python / Pandas</th>
+            <th>Escala</th>
+            <th class="num">No Nulos</th>
+            <th class="num">Nulos</th>
+            <th class="num">Valores Únicos</th>
+            <th>Estado de Auditoría</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>id_registro</code></td>
+            <td><code>int64</code></td>
+            <td>Identificador</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">33</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>anio_escolar</code></td>
+            <td><code>category / str</code></td>
+            <td>Nominal</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">2</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>periodo</code></td>
+            <td><code>int64</code></td>
+            <td>Ordinal</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">2</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>ciclo</code></td>
+            <td><code>category / str</code></td>
+            <td>Ordinal</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">2</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>grado</code></td>
+            <td><code>int64</code></td>
+            <td>Ordinal (1 a 6)</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">6</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>seccion</code></td>
+            <td><code>category / str</code></td>
+            <td>Nominal (A, B, C, D)</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">4</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>grupo</code></td>
+            <td><code>str</code></td>
+            <td>Nominal (1.º A .. 6.º C)</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">17</td>
+            <td><span class="status-ok">100% Válido</span></td>
+          </tr>
+          <tr>
+            <td><code>especialidad</code></td>
+            <td><code>category / str</code></td>
+            <td>Nominal (4 categorías)</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">4</td>
+            <td><span class="status-ok">Homologado</span></td>
+          </tr>
+          <tr>
+            <td><code>abandonos</code></td>
+            <td><code>int64</code></td>
+            <td>Razón discreta (0 a 4)</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">4</td>
+            <td><span class="status-ok">100% Verificado</span></td>
+          </tr>
+          <tr>
+            <td><code>es_periodo_2</code>, <code>ciclo_num</code>, <code>es_segundo_ciclo</code>, <code>grado_alto</code></td>
+            <td><code>int64</code></td>
+            <td>Binaria / Ordinal</td>
+            <td class="num">33</td>
+            <td class="num">0</td>
+            <td class="num">2</td>
+            <td><span class="status-ok">100% Derivado</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="alert-box">
+        <strong>Observación de Cobertura Estructural:</strong> En el período <code>2024-2025</code> se registraron 17 secciones (incluyendo <code>1.º D</code> con 1 abandono). En el período <code>2025-2026</code> la sección <code>1.º D</code> figura como <em>No reportada («—»)</em> en la fuente oficial, por lo que no se incluye como fila numérica ni se le imputa el valor cero.
+      </div>
+    </div>
+
+    <div class="section-card">
+      <h2>2. Resumen Estadístico por Año Escolar y Ciclo Educativo</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Dimensión</th>
+            <th class="num">Secciones (n)</th>
+            <th class="num">Suma Abandonos</th>
+            <th class="num">Media</th>
+            <th class="num">Desv. Estándar</th>
+            <th class="num">Mínimo</th>
+            <th class="num">Mediana</th>
+            <th class="num">Máximo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Período 2024-2025</strong></td>
+            <td class="num">17</td>
+            <td class="num">9</td>
+            <td class="num">0.5294</td>
+            <td class="num">0.7174</td>
+            <td class="num">0</td>
+            <td class="num">0.0000</td>
+            <td class="num">2</td>
+          </tr>
+          <tr>
+            <td><strong>Período 2025-2026</strong></td>
+            <td class="num">16</td>
+            <td class="num">15</td>
+            <td class="num">0.9375</td>
+            <td class="num">1.1236</td>
+            <td class="num">0</td>
+            <td class="num">0.5000</td>
+            <td class="num">4</td>
+          </tr>
+          <tr>
+            <td><strong>Primer Ciclo (1.º a 3.º)</strong></td>
+            <td class="num">15</td>
+            <td class="num">16</td>
+            <td class="num">1.0667</td>
+            <td class="num">1.1000</td>
+            <td class="num">0</td>
+            <td class="num">1.0000</td>
+            <td class="num">4</td>
+          </tr>
+          <tr>
+            <td><strong>Segundo Ciclo (4.º a 6.º)</strong></td>
+            <td class="num">18</td>
+            <td class="num">8</td>
+            <td class="num">0.4444</td>
+            <td class="num">0.7048</td>
+            <td class="num">0</td>
+            <td class="num">0.0000</td>
+            <td class="num">2</td>
+          </tr>
+          <tr>
+            <td><strong>Total Institucional Verificado</strong></td>
+            <td class="num"><strong>33</strong></td>
+            <td class="num"><strong>24</strong></td>
+            <td class="num"><strong>0.7273</strong></td>
+            <td class="num"><strong>0.9445</strong></td>
+            <td class="num"><strong>0</strong></td>
+            <td class="num"><strong>0.0000</strong></td>
+            <td class="num"><strong>4</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-card">
+      <h2>3. Controles Metodológicos y Restricciones de Uso Analítico</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Regla de Control</th>
+            <th>Estado</th>
+            <th>Descripción Metodológica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Exclusión de traslados escolares</td>
+            <td><span class="status-ok">Cumplido</span></td>
+            <td>Los cambios de centro educativo o domicilio con continuidad de estudios no se contabilizan como abandono escolar.</td>
+          </tr>
+          <tr>
+            <td>No invención de denominadores de matrícula</td>
+            <td><span class="status-ok">Cumplido</span></td>
+            <td>Al no disponerse del total de estudiantes inscritos por sección en el documento fuente, no se calculan tasas porcentuales artificiales por sección.</td>
+          </tr>
+          <tr>
+            <td>No entrenamiento predictivo individual sobre n = 33</td>
+            <td><span class="status-warn">Restricción Activa</span></td>
+            <td>Los 33 registros son conteos agregados por sección. No se entrenan modelos de Regresión Logística ni Random Forest de riesgo individual hasta disponer de microdatos estudiantiles longitudinales.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      Reporte generado para el proyecto académico <strong>SIAAE-ML</strong> · Maestría en IA Aplicada a la Educación y la Tecnología (UFHEC) · Ing. Adonamil Cruz Evangelista
+    </footer>
+  </div>
+</body>
+</html>

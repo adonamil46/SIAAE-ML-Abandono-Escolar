@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="step1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="step2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="step3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="step4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="980" height="280" rx="16" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="490" y="34" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="16" font-weight="800" text-anchor="middle">
+    Ciclo Metodológico CRISP-ML(Q) Aplicado al Proyecto SIAAE-ML (UFHEC)
+  </text>
+
+  <!-- Conectores horizontales -->
+  <line x1="160" y1="135" x2="830" y2="135" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Fase 1 -->
+  <g transform="translate(24, 62)">
+    <rect width="142" height="155" rx="12" fill="url(#step1)"/>
+    <circle cx="71" cy="30" r="15" fill="#38bdf8"/>
+    <text x="71" y="35" fill="#0f172a" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" text-anchor="middle">1</text>
+    <text x="71" y="64" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Comprensión del</text>
+    <text x="71" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Problema Educativo</text>
+    <text x="71" y="106" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Politécnico J.A. Castillo</text>
+    <text x="71" y="122" fill="#cbd5e1" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Exclusión de traslados</text>
+    <text x="71" y="138" fill="#38bdf8" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" text-anchor="middle">2024-2025 y 2025-2026</text>
+  </g>
+
+  <!-- Fase 2 -->
+  <g transform="translate(182, 62)">
+    <rect width="142" height="155" rx="12" fill="url(#step2)"/>
+    <circle cx="71" cy="30" r="15" fill="#ffffff"/>
+    <text x="71" y="35" fill="#1e3a8a" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" text-anchor="middle">2</text>
+    <text x="71" y="64" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Comprensión y</text>
+    <text x="71" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Auditoría de Datos</text>
+    <text x="71" y="106" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">33 registros sección-año</text>
+    <text x="71" y="122" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">24 abandonos reales</text>
+    <text x="71" y="138" fill="#93c5fd" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" text-anchor="middle">1.º D (25-26) no rep.</text>
+  </g>
+
+  <!-- Fase 3 -->
+  <g transform="translate(340, 62)">
+    <rect width="142" height="155" rx="12" fill="url(#step2)"/>
+    <circle cx="71" cy="30" r="15" fill="#ffffff"/>
+    <text x="71" y="35" fill="#1e3a8a" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" text-anchor="middle">3</text>
+    <text x="71" y="64" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Preparación ETL y</text>
+    <text x="71" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Análisis EDA</text>
+    <text x="71" y="106" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">17 variables documentadas</text>
+    <text x="71" y="122" fill="#e2e8f0" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">6 figuras SVG + Tablas</text>
+    <text x="71" y="138" fill="#93c5fd" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Cero datos sintéticos</text>
+  </g>
+
+  <!-- Fase 4 -->
+  <g transform="translate(498, 62)">
+    <rect width="142" height="155" rx="12" fill="url(#step3)"/>
+    <circle cx="71" cy="30" r="15" fill="#ffffff"/>
+    <text x="71" y="35" fill="#0f766e" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" text-anchor="middle">4</text>
+    <text x="71" y="64" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Modelado Conteo y</text>
+    <text x="71" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Viabilidad ML</text>
+    <text x="71" y="106" fill="#ccfbf1" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Poisson / Dummy (n=33)</text>
+    <text x="71" y="122" fill="#ccfbf1" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Diseño Reg. Logística</text>
+    <text x="71" y="138" fill="#5eead4" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" text-anchor="middle">y Random Forest (Fase II)</text>
+  </g>
+
+  <!-- Fase 5 -->
+  <g transform="translate(656, 62)">
+    <rect width="142" height="155" rx="12" fill="url(#step3)"/>
+    <circle cx="71" cy="30" r="15" fill="#ffffff"/>
+    <text x="71" y="35" fill="#0f766e" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" text-anchor="middle">5</text>
+    <text x="71" y="64" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Evaluación y</text>
+    <text x="71" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Despliegue Web</text>
+    <text x="71" y="106" fill="#ccfbf1" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Google Colab + Streamlit</text>
+    <text x="71" y="122" fill="#ccfbf1" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">GitHub Pages (HTML/JS)</text>
+    <text x="71" y="138" fill="#5eead4" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Reproducibilidad 100%</text>
+  </g>
+
+  <!-- Fase 6 -->
+  <g transform="translate(814, 62)">
+    <rect width="142" height="155" rx="12" fill="url(#step4)"/>
+    <circle cx="71" cy="30" r="15" fill="#ffffff"/>
+    <text x="71" y="35" fill="#b45309" font-family="Segoe UI, sans-serif" font-size="13" font-weight="800" text-anchor="middle">6</text>
+    <text x="71" y="64" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Monitoreo, Ética y</text>
+    <text x="71" y="80" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Gobernanza</text>
+    <text x="71" y="106" fill="#fef3c7" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Ley 172-13 / MINERD</text>
+    <text x="71" y="122" fill="#fef3c7" font-family="Segoe UI, sans-serif" font-size="10.5" text-anchor="middle">Orientación preventiva</text>
+    <text x="71" y="138" fill="#fde68a" font-family="Segoe UI, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Human-in-the-Loop</text>
+  </g>
+
+  <text x="490" y="252" fill="#475569" font-family="Segoe UI, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+    Trazabilidad integral desde el registro institucional verificado hasta la toma de decisiones psicopedagógicas
+  </text>
+</svg>
