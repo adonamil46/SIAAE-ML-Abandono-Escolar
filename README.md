@@ -1,3 +1,6 @@
+# 📊 ACCESO DIRECTO AL PORTAL INTERACTIVO SIAAE-ML
+### 🔗 [VER GRÁFICOS Y RESULTADOS DEL PROYECTO](https://adonamil46.github.io/SIAAE-ML-Abandono-Escolar/#graficos)
+**Explora las visualizaciones estadísticas, los resultados y las evidencias del Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning.**
 # 🎓 Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning (SIAAE-ML)
 [![Universidad](https://img.shields.io/badge/Universidad-UFHEC-1e3a8a?style=for-the-badge)](https://ufhec.edu.do/)
 [![Programa](https://img.shields.io/badge/Maestr%C3%ADa-IA%20Aplicada%20a%20la%20Educaci%C3%B3n-2563eb?style=for-the-badge)](#autor-e-institucion)
