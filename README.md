@@ -1,5 +1,4 @@
 # 🎓 Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning (SIAAE-ML)
-
 [![Universidad](https://img.shields.io/badge/Universidad-UFHEC-1e3a8a?style=for-the-badge)](https://ufhec.edu.do/)
 [![Programa](https://img.shields.io/badge/Maestr%C3%ADa-IA%20Aplicada%20a%20la%20Educaci%C3%B3n-2563eb?style=for-the-badge)](#autor-e-institucion)
 [![Python](https://img.shields.io/badge/Python-3.11%2B-0d9488?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -210,3 +209,68 @@ python -m http.server 8000
 1. **Focalización psicopedagógica inmediata** del Departamento de Orientación y Psicología en `1.º C`, `2.º B`, `2.º A`, `4.º A` y `5.º A`.
 2. **Programa de nivelación y acogida** durante el primer bimestre para los estudiantes de nuevo ingreso en `1.º` y `2.º` de secundaria.
 3. **Implementación de la Fase II del Sistema de Alerta Temprana (SAT):** Consolidar registros longitudinales anonimizados por estudiante (asistencia del 1.er bimestre, calificaciones parciales P1, sobreedad y matrícula por sección) para entrenar los modelos supervisados de **Regresión Logística** y **Random Forest** diseñados en [`docs/viabilidad_ml_supervisado.md`](docs/viabilidad_ml_supervisado.md).
+
+4. ---
+
+# ENTREGA FINAL DEL PROYECTO — UFHEC 2026
+
+**Proyecto:** Sistema Inteligente de Análisis del Abandono Escolar mediante Machine Learning (SIAAE-ML)
+
+**Autor:** Ing. Adonamil Cruz Evangelista
+
+**Universidad:** Universidad Federico Henríquez y Carvajal (UFHEC)
+
+**Programa:** Maestría en Inteligencia Artificial Aplicada a la Educación y la Tecnología
+
+**Asignatura:** Machine Learning
+
+## Descripción del proyecto
+
+SIAAE-ML es un proyecto académico que analiza el abandono escolar en el Politécnico José Antonio Castillo Ferreiras, Paso de Moca, República Dominicana, durante los períodos escolares 2024-2025 y 2025-2026.
+
+El estudio utiliza 33 observaciones agregadas por sección y período, con 24 casos de abandono verificados, excluyendo los traslados escolares. Integra análisis estadístico, modelado exploratorio de Machine Learning, visualizaciones y herramientas web interactivas.
+
+## Materiales y evidencias de entrega
+
+### 1. Video explicativo del proyecto
+
+[Ver publicación y descargar el video académico](https://github.com/adonamil46/SIAAE-ML-Abandono-Escolar/releases/latest)
+
+### 2. Informe académico final
+
+[Consultar el informe en PDF](docs/Informe_Final_SIAAE_ML_Adonamil_Cruz.pdf)
+
+[Descargar el informe editable en Word](docs/Informe_Final_SIAAE_ML_Adonamil_Cruz.docx)
+
+### 3. Aplicación interactiva Streamlit
+
+[Acceder a la aplicación SIAAE-ML](https://siaae-ml-abandono-escolar-fkdckk6h2ejqtmvhqzq9a6.streamlit.app/)
+
+### 4. Portal web del proyecto
+
+[Visitar el portal científico SIAAE-ML](https://adonamil46.github.io/SIAAE-ML-Abandono-Escolar/)
+
+### 5. Código fuente y cuadernos de investigación
+
+El repositorio contiene los archivos de programación, el código de Streamlit, la documentación metodológica, los cuadernos de trabajo de Machine Learning, los datos agregados autorizados y los gráficos estadísticos.
+
+### 6. Principales resultados
+
+- Período 2024-2025: 9 casos de abandono.
+- Período 2025-2026: 15 casos de abandono.
+- Total del estudio: 24 casos.
+- Primer Ciclo: 16 casos.
+- Segundo Ciclo: 8 casos.
+- Modelo de Poisson: evaluación exploratoria de conteos agregados, sin realizar predicciones individuales de estudiantes.
+
+## Consideraciones éticas
+
+El proyecto utiliza datos agregados para proteger la privacidad estudiantil. Los traslados escolares no se contabilizan como abandono.
+
+La investigación constituye una base para mejorar el análisis institucional y orientar futuras estrategias de prevención del abandono escolar.
+
+---
+
+**Ing. Adonamil Cruz Evangelista**
+
+**UFHEC — Noviembre de 2026**
